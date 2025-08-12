@@ -610,11 +610,6 @@ This table stores the results for every preprocessing variation, including the e
 - Median_Filter_with_Rotation	Score for median filter + rotation.
 - Median_Filter_with_Saturation	Score for median filter + saturation adjustment.
 
-
-
-<p align="center">
-  <img src="output table.png" alt="Your Image Alt Text" />
-</p>
 <p align="center">
   <em>Figure 15: Azure Output Table </em>
 </p>
