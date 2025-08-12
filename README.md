@@ -623,44 +623,172 @@ This table stores the results for every preprocessing variation, including the e
 #### Table 1: Image Processing Results
 <table>
   <tr>
-    <th>Bilateral Filter with Brightness</th>
-    <th>Bilateral Filter with Contrast</th>
-    <th>Bilateral Filter with Rotation</th>
-    <th>Bilateral Filter with Saturation</th>
-    <th>Duration</th>
-    <th>Gaussian Filter with Brightness</th>
-    <th>Gaussian Filter with Contrast</th>
-    <th>Gaussian Filter with Rotation</th>
+    <th>PartitionKey</th>
+    <th>RowKey</th>
+    <th>Best_Preprocessing_Technique</th>
+    <th>Best_Preprocessing_Technique@type</th>
+    <th>Bilateral_Filter_with_Brightness</th>
+    <th>Bilateral_Filter_with_Brightness@type</th>
+    <th>Bilateral_Filter_with_Contrast</th>
+    <th>Bilateral_Filter_with_Contrast@type</th>
+    <th>Bilateral_Filter_with_Rotation</th>
+    <th>Bilateral_Filter_with_Rotation@type</th>
+    <th>Bilateral_Filter_with_Saturation</th>
+    <th>Bilateral_Filter_with_Saturation@type</th>
+    <th>Description</th>
+    <th>Description@type</th>
+    <th>Duration_in_Seconds</th>
+    <th>Duration_in_Seconds@type</th>
+    <th>ExperimentId</th>
+    <th>ExperimentId@type</th>
+    <th>Factor</th>
+    <th>Factor@type</th>
+    <th>Gaussian_Filter_with_Brightness</th>
+    <th>Gaussian_Filter_with_Brightness@type</th>
+    <th>Gaussian_Filter_with_Contrast</th>
+    <th>Gaussian_Filter_with_Contrast@type</th>
+    <th>Gaussian_Filter_with_Rotation</th>
+    <th>Gaussian_Filter_with_Rotation@type</th>
+    <th>Gaussian_Filter_with_Saturation</th>
+    <th>Gaussian_Filter_with_Saturation@type</th>
+    <th>Gray_Scale_conversition_with_Brightness</th>
+    <th>Gray_Scale_conversition_with_Brightness@type</th>
+    <th>Gray_Scale_conversition_with_Contrast</th>
+    <th>Gray_Scale_conversition_with_Contrast@type</th>
+    <th>Gray_Scale_conversition_with_Rotation</th>
+    <th>Gray_Scale_conversition_with_Rotation@type</th>
+    <th>Gray_Scale_conversition_with_Saturation</th>
+    <th>Gray_Scale_conversition_with_Saturation@type</th>
+    <th>InputImageName</th>
+    <th>InputImageName@type</th>
+    <th>Language</th>
+    <th>Language@type</th>
+    <th>Median_Filter_with_Brightness</th>
+    <th>Median_Filter_with_Brightness@type</th>
+    <th>Median_Filter_with_Contrast</th>
+    <th>Median_Filter_with_Contrast@type</th>
+    <th>Median_Filter_with_Rotation</th>
+    <th>Median_Filter_with_Rotation@type</th>
+    <th>Median_Filter_with_Saturation</th>
+    <th>Median_Filter_with_Saturation@type</th>
+    <th>OCRExtractedText</th>
+    <th>OCRExtractedText@type</th>
+    <th>PreProcessedImages</th>
+    <th>PreProcessedImages@type</th>
+    <th>ResultSimilarityMatrix</th>
+    <th>ResultSimilarityMatrix@type</th>
   </tr>
   <tr>
+    <td>TesseractCoders</td>
+    <td>034ca7fb-39ca-498a-8c82-f5326ca8ab8a</td>
+    <td>gaussian_with_contrast</td>
+    <td>String</td>
     <td>67</td>
+    <td>Int32</td>
     <td>63</td>
+    <td>Int32</td>
     <td>1</td>
+    <td>Int32</td>
     <td>68</td>
-    <td>null</td>
+    <td>Int32</td>
+    <td>OCR text extraction from all images in InputImages folder</td>
+    <td>String</td>
+    <td>315</td>
+    <td>Int64</td>
+    <td>exp-ocr-001</td>
+    <td>String</td>
+    <td>1.3</td>
+    <td>Double</td>
     <td>53</td>
+    <td>Int32</td>
     <td>36</td>
+    <td>Int32</td>
     <td>0</td>
-  </tr>
-  <tr>
-    <td>45</td>
-    <td>49</td>
-    <td>4</td>
-    <td>53</td>
-    <td>null</td>
-    <td>54</td>
+    <td>Int32</td>
     <td>41</td>
-    <td>7</td>
+    <td>Int32</td>
+    <td>68</td>
+    <td>Int32</td>
+    <td>36</td>
+    <td>Int32</td>
+    <td>0</td>
+    <td>Int32</td>
+    <td>41</td>
+    <td>Int32</td>
+    <td>French_text</td>
+    <td>String</td>
+    <td>French</td>
+    <td>String</td>
+    <td>17</td>
+    <td>Int32</td>
+    <td>15</td>
+    <td>Int32</td>
+    <td>2</td>
+    <td>Int32</td>
+    <td>23</td>
+    <td>Int32</td>
+    <td>https://ourcloudprojectstorage.blob.core.windows.net/output/OCRExtractedText/French_text</td>
+    <td>String</td>
+    <td>https://ourcloudprojectstorage.blob.core.windows.net/output/PreProcessedImages/French_text</td>
+    <td>String</td>
+    <td>https://ourcloudprojectstorage.blob.core.windows.net/output/ResultSimilarityMatrix/French_text</td>
+    <td>String</td>
   </tr>
   <tr>
-    <td>69</td>
-    <td>70</td>
-    <td>1</td>
-    <td>68</td>
-    <td>null</td>
-    <td>52</td>
-    <td>55</td>
-    <td>0</td>
+    <td>TesseractCoders</td>
+    <td>11d30f63-1e28-4e83-a3f6-a175340dc048</td>
+    <td>gaussian_with_contrast</td>
+    <td>String</td>
+    <td>45</td>
+    <td>Int32</td>
+    <td>49</td>
+    <td>Int32</td>
+    <td>4</td>
+    <td>Int32</td>
+    <td>53</td>
+    <td>Int32</td>
+    <td>OCR text extraction from all images in InputImages folder</td>
+    <td>String</td>
+    <td>318</td>
+    <td>Int64</td>
+    <td>exp-ocr-001</td>
+    <td>String</td>
+    <td>0.9</td>
+    <td>Double</td>
+    <td>54</td>
+    <td>Int32</td>
+    <td>41</td>
+    <td>Int32</td>
+    <td>7</td>
+    <td>Int32</td>
+    <td>54</td>
+    <td>Int32</td>
+    <td>51</td>
+    <td>Int32</td>
+    <td>41</td>
+    <td>Int32</td>
+    <td>7</td>
+    <td>Int32</td>
+    <td>54</td>
+    <td>Int32</td>
+    <td>spanish_poem</td>
+    <td>String</td>
+    <td>Spanish</td>
+    <td>String</td>
+    <td>41</td>
+    <td>Int32</td>
+    <td>28</td>
+    <td>Int32</td>
+    <td>4</td>
+    <td>Int32</td>
+    <td>44</td>
+    <td>Int32</td>
+    <td>https://ourcloudprojectstorage.blob.core.windows.net/output/OCRExtractedText/spanish_poem</td>
+    <td>String</td>
+    <td>https://ourcloudprojectstorage.blob.core.windows.net/output/PreProcessedImages/spanish_poem</td>
+    <td>String</td>
+    <td>https://ourcloudprojectstorage.blob.core.windows.net/output/ResultSimilarityMatrix/spanish_poem</td>
+    <td>String</td>
   </tr>
 </table>
 
