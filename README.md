@@ -504,7 +504,9 @@ A queue message with useSoftmax `True` is defined as follows:
 The output files generated from the experiments are stored in Azure Blob Storage for persistent, organized, and scalable access. In the blob storage, we store the results in three separate folders:
 
 **OCR Extracted Text** – This folder contains .txt files with the extracted text from all the preprocessed techniques.
+
 **Preprocessed Images** – This folder contains the output images from all preprocessing techniques applied to the input.
+
 **Result Similarity Matrix** – This folder contains the similarity values among all the preprocessing techniques.
 
 These files contain the results of the experiments, which can be used for further analysis.
