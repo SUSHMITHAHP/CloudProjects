@@ -501,7 +501,13 @@ A queue message with useSoftmax `True` is defined as follows:
 
 ### Output files generated from the blob storage:
 
-The output files generated from the experiments are stored in the Blob Storage. Each file is uniquely named using the following convention: `experiment_{experimentId}_{berlinTime:yyyyMMddHHmmss}_output.txt`. This naming format ensures that each output file is easily identifiable, incorporating the experiment ID and the timestamp (in Berlin time) at which the output was generated. These files contain the results of the experiments, including the predicted values and relevant metadata, which can be used for further analysis and validation.
+The output files generated from the experiments are stored in Azure Blob Storage for persistent, organized, and scalable access. In the blob storage, we store the results in three separate folders:
+
+OCR Extracted Text – This folder contains .txt files with the extracted text from all the preprocessed techniques.
+Preprocessed Images – This folder contains the output images from all preprocessing techniques applied to the input.
+Result Similarity Matrix – This folder contains the similarity values among all the preprocessing techniques.
+
+These files contain the results of the experiments, which can be used for further analysis.
 
 <p align="center">
   <img src="fig14_outputfileBlob.png" alt="Your Image Alt Text" />
@@ -509,72 +515,10 @@ The output files generated from the experiments are stored in the Blob Storage. 
 <p align="center">
   <em>Figure 14: Azure Output Blob Storage </em>
 </p>
-
-**Sample Result of an Output Console Log**
+**Sample Result of an Output Console Log -- to be added**
 ```
 -------------- 8 ---------------
-Col  SDR: 86, 92, 146, 152, 166, 171, 172, 178, 180, 182, 183, 188, 191, 192, 193, 197, 201, 205, 206, 218, 
-Cell SDR: 2164, 2311, 3655, 3810, 4162, 4285, 4319, 4451, 4510, 4558, 4598, 4709, 4781, 4809, 4839, 4949, 5032, 5133, 5161, 5453, 
-Match. Actual value: S1_9-10-1-2-3-4-5-6-7-8 - Predicted value: S1_9-10-1-2-3-4-5-6-7-8.
-Experiment with SoftMax approach Successfully Running
-Current Input: 8 	| Predicted Input: S1_10-1-2-3-4-5-6-7-8-9 - 0.049537809249446556
-Current Input: 8 	| Predicted Input: S1_1-2-3-4-5-6-7-8-9-10 - 0.050062852708172866
-Current Input: 8 	| Predicted Input: S1_9-10-1-2-3-4-5-6-7-8 - 0.09003992839886198
--------------- 9 ---------------
-Col  SDR: 86, 92, 146, 152, 166, 171, 172, 178, 180, 182, 183, 188, 191, 192, 193, 197, 201, 205, 206, 218, 
-Cell SDR: 2170, 2311, 3655, 3808, 4162, 4285, 4320, 4474, 4515, 4558, 4590, 4709, 4781, 4783, 4809, 4839, 4949, 5036, 5133, 5161, 5453, 
-Match. Actual value: S1_10-1-2-3-4-5-6-7-8-9 - Predicted value: S1_10-1-2-3-4-5-6-7-8-9.
-Experiment with SoftMax approach Successfully Running
-Current Input: 9 	| Predicted Input: S1_10-1-2-3-4-5-6-7-8-9 - 0.08333333333333333
-Current Input: 9 	| Predicted Input: S1_1-2-3-4-5-6-7-8-9-10 - 0.08333333333333333
-Current Input: 9 	| Predicted Input: S1_9-10-1-2-3-4-5-6-7-8 - 0.08333333333333333
--------------- 10 ---------------
-Col  SDR: 86, 92, 146, 152, 166, 171, 172, 178, 180, 182, 183, 188, 191, 192, 193, 197, 201, 205, 206, 218, 
-Cell SDR: 2170, 2311, 3655, 3808, 4162, 4285, 4320, 4474, 4515, 4558, 4590, 4709, 4783, 4809, 4839, 4949, 5036, 5133, 5161, 5453, 
-Match. Actual value: S1_1-2-3-4-5-6-7-8-9-10 - Predicted value: S1_10-1-2-3-4-5-6-7-8-9.
-Experiment with SoftMax approach Successfully Running
-Current Input: 10 	| Predicted Input: S1_10-1-2-3-4-5-6-7-8-9 - 0.08333333333333333
-Current Input: 10 	| Predicted Input: S1_1-2-3-4-5-6-7-8-9-10 - 0.08333333333333333
-Current Input: 10 	| Predicted Input: S1_9-10-1-2-3-4-5-6-7-8 - 0.08333333333333333
-Cycle: 284	Matches=9 of 10	 90%
-100% accuracy reached 30 times.
-Sequence learned. The algorithm is in the stable state after 30 repeats with with accuracy 90 of maximum possible 30. Elapsed sequence S1 learning time: 00:00:33.6688347.
 
-------------------------------
-Predicting next elements for the input sequence: 1, 2, 3, 4, 2, 5
---------------- Predicting for input 1 ---------------
-Predicted Input: S1_4-5-6-7-8-9-10-1-2-3, Similarity: 0.08333333333333333
-Predicted Input: S1_5-6-7-8-9-10-1-2-3-4, Similarity: 0.08333333333333333
-Predicted Input: S1_3-4-5-6-7-8-9-10-1-2, Similarity: 0.08333333333333333
-Predicted Sequence: S1, Predicted Next Element: 3
---------------- Predicting for input 2 ---------------
-Predicted Input: S1_5-6-7-8-9-10-1-2-3-4, Similarity: 0.08333333333329938
-Predicted Input: S1_8-9-10-1-2-3-4-5-6-7, Similarity: 0.08333333333329938
-Predicted Input: S1_4-5-6-7-8-9-10-1-2-3, Similarity: 0.08333333333334202
-Predicted Sequence: S1, Predicted Next Element: 4
---------------- Predicting for input 3 ---------------
-Predicted Input: S1_5-6-7-8-9-10-1-2-3-4, Similarity: 0.08333333333333333
-Predicted Input: S1_4-5-6-7-8-9-10-1-2-3, Similarity: 0.08333333333333333
-Predicted Input: S1_3-4-5-6-7-8-9-10-1-2, Similarity: 0.08333333333333333
-Predicted Sequence: S1, Predicted Next Element: 4
---------------- Predicting for input 4 ---------------
-Predicted Input: S1_5-6-7-8-9-10-1-2-3-4, Similarity: 0.08333333333329938
-Predicted Input: S1_8-9-10-1-2-3-4-5-6-7, Similarity: 0.08333333333329938
-Predicted Input: S1_4-5-6-7-8-9-10-1-2-3, Similarity: 0.08333333333334202
-Predicted Sequence: S1, Predicted Next Element: 4
---------------- Predicting for input 2 ---------------
-Predicted Input: S1_5-6-7-8-9-10-1-2-3-4, Similarity: 0.08333333333333333
-Predicted Input: S1_4-5-6-7-8-9-10-1-2-3, Similarity: 0.08333333333333333
-Predicted Input: S1_3-4-5-6-7-8-9-10-1-2, Similarity: 0.08333333333333333
-Predicted Sequence: S1, Predicted Next Element: 4
---------------- Predicting for input 5 ---------------
-Predicted Input: S1_8-9-10-1-2-3-4-5-6-7, Similarity: 0.08249066468638663
-Predicted Input: S1_6-7-8-9-10-1-2-3-4-5, Similarity: 0.08340992463327228
-Predicted Input: S1_7-8-9-10-1-2-3-4-5-6, Similarity: 0.08340993596743444
-Predicted Sequence: S1, Predicted Next Element: 7
-------------------------------
-Total Predictions: 6, Total Matches: 6
-Prediction accuracy for 1, 2, 3, 4, 2, 5 is 100%
 ```
 
 ### Output Tables generated upon successful run:
