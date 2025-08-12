@@ -587,28 +587,28 @@ This table stores the results for every preprocessing variation, including the e
 - RowKey – A unique identifier for the record (GUID).
 - ExperimentId – Unique ID of the experiment.
 - InputImageName – Name of the input image file used in the experiment.
-- Best_Preprocessing_Technique – The best-performing preprocessing technique for this experiment.
+- Best_Preprocessing_Technique – The best-performing preprocessing technique for the given input image.
 - Factor – Scaling factor or related numeric parameter for preprocessing.
 - Timestamp – UTC date/time when the record was inserted.
 - ETag – Used for concurrency control in Azure Table Storage.
-- Language – Language associated with the experiment results.
+- Language – Language associated with the input image.
 - Duration – Total execution time of the experiment.
-- Bilateral_Filter_with_Brightness	Score for bilateral filter + brightness adjustment.
-- Bilateral_Filter_with_Contrast	Score for bilateral filter + contrast adjustment.
-- Bilateral_Filter_with_Rotation	Score for bilateral filter + rotation.
-- Bilateral_Filter_with_Saturation	Score for bilateral filter + saturation adjustment.
-- Gaussian_Filter_with_Brightness	Score for Gaussian filter + brightness adjustment.
-- Gaussian_Filter_with_Contrast	Score for Gaussian filter + contrast adjustment.
-- Gaussian_Filter_with_Rotation	Score for Gaussian filter + rotation.
-- Gaussian_Filter_with_Saturation	Score for Gaussian filter + saturation adjustment.
-- Gray_Scale_conversition_with_Brightness	Score for grayscale conversion + brightness adjustment.
-- Gray_Scale_conversition_with_Contrast	Score for grayscale conversion + contrast adjustment.
-- Gray_Scale_conversition_with_Rotation	Score for grayscale conversion + rotation.
-- Gray_Scale_conversition_with_Saturation	Score for grayscale conversion + saturation adjustment.
-- Median_Filter_with_Brightness	Score for median filter + brightness adjustment.
-- Median_Filter_with_Contrast	Score for median filter + contrast adjustment.
-- Median_Filter_with_Rotation	Score for median filter + rotation.
-- Median_Filter_with_Saturation	Score for median filter + saturation adjustment.
+- Bilateral_Filter_with_Brightness	Extracted character length for bilateral filter + brightness adjustment.
+- Bilateral_Filter_with_Contrast	Extracted character length for bilateral filter + contrast adjustment.
+- Bilateral_Filter_with_Rotation	Extracted character length for bilateral filter + rotation.
+- Bilateral_Filter_with_Saturation	Extracted character length for bilateral filter + saturation adjustment.
+- Gaussian_Filter_with_Brightness	Extracted character length for Gaussian filter + brightness adjustment.
+- Gaussian_Filter_with_Contrast	Extracted character length for Gaussian filter + contrast adjustment.
+- Gaussian_Filter_with_Rotation	Extracted character length for Gaussian filter + rotation.
+- Gaussian_Filter_with_Saturation	Extracted character length for Gaussian filter + saturation adjustment.
+- Gray_Scale_conversition_with_Brightness	Extracted character length for grayscale conversion + brightness adjustment.
+- Gray_Scale_conversition_with_Contrast	Extracted character length for grayscale conversion + contrast adjustment.
+- Gray_Scale_conversition_with_Rotation	Extracted character length for grayscale conversion + rotation.
+- Gray_Scale_conversition_with_Saturation	Extracted character length for grayscale conversion + saturation adjustment.
+- Median_Filter_with_Brightness	Extracted character length for median filter + brightness adjustment.
+- Median_Filter_with_Contrast	Extracted character length for median filter + contrast adjustment.
+- Median_Filter_with_Rotation	Extracted character length for median filter + rotation.
+- Median_Filter_with_Saturation	Extracted character length for median filter + saturation adjustment.
 
 <p align="center">
   <em>Figure 15: Azure Output Table </em>
