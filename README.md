@@ -645,225 +645,51 @@ On the other hand, the fields of the Experiments Results Table is presented in a
 - DurationSec: Execution Time of the experiment
 - Accuracy: Accuracy of the experiment
 
-#### Table 1: Conducted Experiment Results Table
+
+#### Table 1: Image Processing Results
 <table>
   <tr>
-    <th>Exp_Id</th>
-    <th>Name</th>
-    <th>Description</th>
-    <th>Input file</th>
-    <th>useSoftmax</th>
-    <th>DurationSec</th>
-    <th>Accuracy</th>
+    <th>Bilateral Filter with Brightness</th>
+    <th>Bilateral Filter with Contrast</th>
+    <th>Bilateral Filter with Rotation</th>
+    <th>Bilateral Filter with Saturation</th>
+    <th>Duration</th>
+    <th>Gaussian Filter with Brightness</th>
+    <th>Gaussian Filter with Contrast</th>
+    <th>Gaussian Filter with Rotation</th>
   </tr>
   <tr>
+    <td>67</td>
+    <td>63</td>
     <td>1</td>
-    <td>Experiment 1a</td>
-    <td>Running KNN Classifier with 10 train & 5 test data</td>
-    <td>Train_Test_Sequnces_exp1.txt</td>
-    <td>true</td>
-    <td>34</td>
-    <td>100%</td>
+    <td>68</td>
+    <td>null</td>
+    <td>53</td>
+    <td>36</td>
+    <td>0</td>
   </tr>
   <tr>
-    <td>2</td>
-    <td>Experiment 1b</td>
-    <td>Running KNN Classifier with 10 train & 5 test data</td>
-    <td>Train_Test_Sequnces_exp1.txt</td>
-    <td>false</td>
-    <td>627</td>
-    <td>100%</td>
-  </tr>
-  <tr>
-    <td>3</td>
-    <td>Experiment 2a</td>
-    <td>Running KNN Classifier with 15 train & 5 test data</td>
-    <td>Train_Test_Sequnces_exp2.txt</td>
-    <td>true</td>
-    <td>746</td>
-    <td>100%</td>
-  </tr>
-  <tr>
+    <td>45</td>
+    <td>49</td>
     <td>4</td>
-    <td>Experiment 2b</td>
-    <td>Running KNN Classifier with 15 train & 5 test data</td>
-    <td>Train_Test_Sequnces_exp2.txt</td>
-    <td>false</td>
-    <td>1222</td>
-    <td>100%</td>
-  </tr>
-  <tr>
-    <td>5</td>
-    <td>Experiment 3a</td>
-    <td>Running KNN Classifier with 20 train & 5 test data</td>
-    <td>Train_Test_Sequnces_exp3.txt</td>
-    <td>true</td>
-    <td>639</td>
-    <td>80%</td>
-  </tr>
-  <tr>
-    <td>6</td>
-    <td>Experiment 3b</td>
-    <td>Running KNN Classifier with 20 train & 5 test data</td>
-    <td>Train_Test_Sequnces_exp3.txt</td>
-    <td>false</td>
-    <td>725</td>
-    <td>100%</td>
-  </tr>
-  <tr>
+    <td>53</td>
+    <td>null</td>
+    <td>54</td>
+    <td>41</td>
     <td>7</td>
-    <td>Experiment 4a</td>
-    <td>Running KNN Classifier with 30 train & 14 test data</td>
-    <td>Train_Test_Sequnces_exp4.txt</td>
-    <td>true</td>
-    <td>1567</td>
-    <td>92.5%</td>
   </tr>
   <tr>
-    <td>8</td>
-    <td>Experiment 4b</td>
-    <td>Running KNN Classifier with 30 train & 14 test data</td>
-    <td>Train_Test_Sequnces_exp4.txt</td>
-    <td>false</td>
-    <td>1591</td>
-    <td>92.5%</td>
-  </tr>
-  <tr>
-    <td>9</td>
-    <td>Experiment 5a</td>
-    <td>Running KNN Classifier with 40 train & 14 test data</td>
-    <td>Train_Test_Sequnces_exp5.txt</td>
-    <td>true</td>
-    <td>755</td>
-    <td>92.5%</td>
-  </tr>
-  <tr>
-    <td>10</td>
-    <td>Experiment 5b</td>
-    <td>Running KNN Classifier with 40 train & 14 test data</td>
-    <td>Train_Test_Sequnces_exp5.txt</td>
-    <td>false</td>
-    <td>1825</td>
-    <td>78.5%</td>
-  </tr>
-  <tr>
-    <td>11</td>
-    <td>Experiment 6a</td>
-    <td>Running KNN Classifier with 50 train & 21 test data</td>
-    <td>Train_Test_Sequnces_exp6.txt</td>
-    <td>true</td>
-    <td>1414</td>
-    <td>90.33%</td>
-  </tr>
-  <tr>
-    <td>12</td>
-    <td>Experiment 6b</td>
-    <td>Running KNN Classifier with 50 train & 21 test data</td>
-    <td>Train_Test_Sequnces_exp6.txt</td>
-    <td>false</td>
-    <td>2995</td>
-    <td>61.66%</td>
-  </tr>
-  <tr>
-    <td>13</td>
-    <td>Experiment 7a</td>
-    <td>Running KNN Classifier with 60 train & 10 test data</td>
-    <td>Train_Test_Sequnces_exp7.txt</td>
-    <td>true</td>
-    <td>2619</td>
-    <td>100%</td>
-  </tr>
-  <tr>
-    <td>14</td>
-    <td>Experiment 7b</td>
-    <td>Running KNN Classifier with 60 train & 10 test data</td>
-    <td>Train_Test_Sequnces_exp7.txt</td>
-    <td>false</td>
-    <td>2281</td>
-    <td>90%</td>
-  </tr>
-  <tr>
-    <td>15</td>
-    <td>Experiment 8a</td>
-    <td>Running KNN Classifier with 100 train & 10 test data</td>
-    <td>Train_Test_Sequnces_exp8.txt</td>
-    <td>true</td>
-    <td>3221</td>
-    <td>90%</td>
-  </tr>
-  <tr>
-    <td>16</td>
-    <td>Experiment 8b</td>
-    <td>Running KNN Classifier with 100 train & 10 test data</td>
-    <td>Train_Test_Sequnces_exp8.txt</td>
-    <td>false</td>
-    <td>5953</td>
-    <td>100%</td>
-  </tr>
-  <tr>
-    <td>17</td>
-    <td>Experiment 9a</td>
-    <td>Running KNN Classifier with 150 train & 10 test data</td>
-    <td>Train_Test_Sequnces_exp9.txt</td>
-    <td>true</td>
-    <td>30754</td>
-    <td>100%</td>
-  </tr>
-  <tr>
-    <td>18</td>
-    <td>Experiment 9b</td>
-    <td>Running KNN Classifier with 150 train & 10 test data</td>
-    <td>Train_Test_Sequnces_exp9.txt</td>
-    <td>false</td>
-    <td>5030</td>
-    <td>90%</td>
-  </tr>
-   <tr>
-    <td>19</td>
-    <td>Experiment 10a</td>
-    <td>Running KNN Classifier with 200 train & 20 test data</td>
-    <td>Train_Test_Sequnces_exp10.txt</td>
-    <td>true</td>
-    <td>6947</td>
-    <td>100%</td>
-  </tr>
-   <tr>
-    <td>20</td>
-    <td>Experiment 10b</td>
-    <td>Running KNN Classifier with 200 train & 20 test data</td>
-    <td>Train_Test_Sequnces_exp10.txt</td>
-    <td>false</td>
-    <td>5666</td>
-    <td>100%</td>
-  </tr>
-    <tr>
-    <td>21</td>
-    <td>Experiment 11a</td>
-    <td>Running KNN Classifier with 300 train & 25 test data</td>
-    <td>Train_Test_Sequnces_exp11.txt</td>
-    <td>true</td>
-    <td>5475</td>
-    <td>96%</td>
-  </tr>
-    <tr>
-    <td>23</td>
-    <td>Experiment 12a</td>
-    <td>Running KNN Classifier with 500 train & 30 test data</td>
-    <td>Train_Test_Sequnces_exp12.txt</td>
-    <td>true</td>
-    <td>5062</td>
-    <td>100%</td>
-  </tr>
-    <tr>
-    <td>24</td>
-    <td>Experiment 13a</td>
-    <td>Running KNN Classifier with 1000 train & 50 test data</td>
-    <td>Train_Test_Sequnces_exp13.txt</td>
-    <td>true</td>
-    <td>135579</td>
-    <td>100%</td>
+    <td>69</td>
+    <td>70</td>
+    <td>1</td>
+    <td>68</td>
+    <td>null</td>
+    <td>52</td>
+    <td>55</td>
+    <td>0</td>
   </tr>
 </table>
+
 
 **Proof of Experiments Conducted:**
 1. [OutputFiles](https://studfrauasde-my.sharepoint.com/:f:/g/personal/riswan_saleem-basha2_stud_fra-uas_de/EmiPGStNXmlAqVLTPKtILycBWaNpZdu0HGl3gaecBiMGhw?e=szHAPB) --> Output Files containing each console logs has been pushed into OneDrive.
