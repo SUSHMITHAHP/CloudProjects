@@ -785,7 +785,64 @@ This table stores the results for every preprocessing variation, including the e
     <td>https://ourcloudprojectstorage.blob.core.windows.net/output/ResultSimilarityMatrix/spanish_poem</td>
     <td>String</td>
   </tr>
+  <tr>
+    <td>TesseractCoders</td>
+    <td>8e701abe-677d-4cb1-89d1-9cccbde6c72a</td>
+    <td>bilateral_with_saturation</td>
+    <td>String</td>
+    <td>69</td>
+    <td>Int32</td>
+    <td>70</td>
+    <td>Int32</td>
+    <td>1</td>
+    <td>Int32</td>
+    <td>68</td>
+    <td>Int32</td>
+    <td>OCR text extraction from all images in InputImages folder</td>
+    <td>String</td>
+    <td>342</td>
+    <td>Int64</td>
+    <td>exp-ocr-001</td>
+    <td>String</td>
+    <td>0.25</td>
+    <td>Double</td>
+    <td>52</td>
+    <td>Int32</td>
+    <td>55</td>
+    <td>Int32</td>
+    <td>0</td>
+    <td>Int32</td>
+    <td>52</td>
+    <td>Int32</td>
+    <td>68</td>
+    <td>Int32</td>
+    <td>55</td>
+    <td>Int32</td>
+    <td>0</td>
+    <td>Int32</td>
+    <td>52</td>
+    <td>Int32</td>
+    <td>German_poem</td>
+    <td>String</td>
+    <td>German</td>
+    <td>String</td>
+    <td>60</td>
+    <td>Int32</td>
+    <td>53</td>
+    <td>Int32</td>
+    <td>1</td>
+    <td>Int32</td>
+    <td>58</td>
+    <td>Int32</td>
+    <td>https://ourcloudprojectstorage.blob.core.windows.net/output/OCRExtractedText/German_poem</td>
+    <td>String</td>
+    <td>https://ourcloudprojectstorage.blob.core.windows.net/output/PreProcessedImages/German_poem</td>
+    <td>String</td>
+    <td>https://ourcloudprojectstorage.blob.core.windows.net/output/ResultSimilarityMatrix/German_poem</td>
+    <td>String</td>
+  </tr>
 </table>
+
 
 
 **Proof of Experiments Conducted:**
