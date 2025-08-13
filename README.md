@@ -404,9 +404,9 @@ To support the experiments, necessary input files were uploaded to Azure Blob St
 
 The input files used in the experiments are maintained in Azure Blob Storage with a structured, multilingual organization for efficient access and processing. The resources include:
 
-Input Images – Stored in separate folders for each language, containing text images in languages such as English, French, German, and Spanish. This enables targeted OCR analysis and direct performance comparison across different languages.
+**Input Images** – Stored in separate folders for each language, containing text images in languages such as English, French, German, and Spanish. This enables targeted OCR analysis and direct performance comparison across different languages.
 
-ZIP Archives – Compressed datasets grouped for bulk processing, improving efficiency in upload, download, and storage of multiple related files.
+**ZIP Archives** – Compressed datasets grouped for bulk processing, improving efficiency in upload, download, and storage of multiple related files.
 
 This detailed organization allows for streamlined workflows, reproducible results, and comprehensive evaluation of preprocessing techniques across various languages and dataset formats.
 
@@ -423,6 +423,7 @@ This detailed organization allows for streamlined workflows, reproducible result
 ### Message Queues:
 
 The Azure Queue message triggers the application and provides all necessary parameters for the experiment execution. The message is in JSON format and contains the following fields:
+
 
 <table>
   <thead>
