@@ -398,7 +398,7 @@ docker push knncloudprojectcr.azurecr.io/mycloudproject:v2
 
 ## Experiment Result Analysis
 
-To support the experiments, necessary input datasets were uploaded to Azure Blob Storage. The storage structure includes dedicated folders such as InputImages, ZipDatasets, and ReferenceFiles to keep resources organized. This approach ensures that all experimental runs have access to consistent, well-maintained data, enabling reliable testing, comparison, and validation of results.
+To support the experiments, necessary input files were uploaded to Azure Blob Storage. The storage structure includes dedicated folders such as InputImages, Zip files to keep resources organized. This approach ensures that all experimental runs have access to consistent, well-maintained files, enabling reliable testing, comparison, and validation of results.
 
 ### Input Files given to the blob storage:
 
@@ -422,77 +422,103 @@ This detailed organization allows for streamlined workflows, reproducible result
 
 ### Message Queues:
 
-In the context of classification, different methods and metrics can be used depending on whether the SoftMax algorithm is employed. Below are two approaches outlining the processes and methods used for prediction, classification, and metrics evaluation.
+The Azure Queue message triggers the application and provides all necessary parameters for the experiment execution. The message is in JSON format and contains the following fields:
 
-1. **With Softmax Enabled** (`useSoftmax: true`):
+<table>
+  <thead>
+    <tr>
+      <th>Field</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>ExperimentId</td>
+      <td>String</td>
+      <td>A unique identifier for the experiment (e.g., exp-ocr-001).</td>
+    </tr>
+    <tr>
+      <td>InputImage</td>
+      <td>String</td>
+      <td>The filename of the input image to be processed (e.g., oldText.png).</td>
+    </tr>
+    <tr>
+      <td>OpenAIKey</td>
+      <td>String</td>
+      <td>The API key used for connecting to the OpenAI services.</td>
+    </tr>
+    <tr>
+      <td>Name</td>
+      <td>String</td>
+      <td>The name of the experiment (e.g., ocr text extraction).</td>
+    </tr>
+    <tr>
+      <td>Description</td>
+      <td>String</td>
+      <td>A short explanation of the experiment's purpose (e.g., OCR extraction from all images in the InputImages folder).</td>
+    </tr>
+    <tr>
+      <td>Language</td>
+      <td>String</td>
+      <td>The language code for OCR processing (e.g., eng for English).</td>
+    </tr>
+    <tr>
+      <td>ProcessingOptions</td>
+      <td>Object</td>
+      <td>
+        Specifies processing parameters:<br>
+        <ul>
+          <li>BatchSize (Int) – Number of images processed per batch.</li>
+          <li>ParallelProcessing (Bool) – Whether multiple images are processed in parallel.</li>
+          <li>ProcessingMode (String) – The mode of operation, such as "Batch".</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>MessageId</td>
+      <td>String</td>
+      <td>The identifier of the queue message, used for tracking.</td>
+    </tr>
+    <tr>
+      <td>MessageReceipt</td>
+      <td>String/Null</td>
+      <td>The receipt token for the queue message; can be null when first sent.</td>
+    </tr>
+  </tbody>
+</table>
 
 
-**Prediction Method:** The system utilizes the SoftMax algorithm.
-
-**Process:**
-- **Prediction:** The `PredictWithSoftmax` method generates the initial predictions.
-- **Weight Calculation:** The `CalculateSoftmaxWeights` method calculates the weights associated with the predictions.
-
-**Metrics Evaluation:**
-- The `ComputeCosineSimilarity` method assesses vector similarity.
-- The `GetDistanceTableforCosine` method creates a distance table based on cosine similarity.
-
-**Final Classification:**
-- The Softmax method computes the probabilities, refining the classification output based on the SoftMax algorithm.
-
-A queue message with useSoftmax `True` is defined as follows:
-
-   ```json
-   {
-      "ExperimentId": "3",
-      "Name": "Experiment 2a",
-      "Description": "Running KNN Classifier with 15 train & 5 test data",
-      "InputFile": "Train_Test_Sequnces_exp2.txt",
-      "useSoftmax": true
-   }
-```
 
 <p align="center">
   <img src="queue message true.png" alt="Your Image Alt Text" />
 </p>
 <p align="center">
-  <em>Figure 12: Message Queue with useSoftmax: true</em>
+  <em>Figure 12: Message Queue : true</em>
 </p>
 
-2. **With Softmax Disabled** (`useSoftmax: false`):
 
-**Prediction Method:** The system uses a Simple Weightage Algorithm.
 
-**Process:**
-1. **Prediction:** The `GetPredictedInputValues` method generates the initial predictions.
-2. **Classification:** The `SelectBestClassification` method determines the best classification based on the predictions.
-
-**Metrics Evaluation:**
-- The system may use the `LeastValue` method for minimal distance calculation.
-- The `ComputeCosineSimilarity` method can also be used to measure similarity.
-
-**Distance Table:**
-- The `GetDistanceTable` method creates a general distance table.
-- If cosine similarity is required, `GetDistanceTableforCosine` is used.
-
-  A queue message with useSoftmax `False` is defined as follows:
+  A queue message defined as follows:
   
    ```json
    {
-      "ExperimentId": "4",
-      "Name": "Experiment 2b",
-      "Description": "Running KNN Classifier with 15 train & 5 test data",
-      "InputFile": "Train_Test_Sequnces_exp2.txt",
-      "useSoftmax": false
+  "ExperimentId": "exp-ocr-001",
+  "InputImage":"oldText.png",
+  "OpenAIKey":" ",
+  "Name": "ocr text extraction",
+  "Description": "OCR text extraction from all images in InputImages folder",
+  "Language": "eng",
+  "ProcessingOptions": {
+    "BatchSize": 10,
+    "ParallelProcessing": true,
+    "ProcessingMode": "Batch"
+  },
+  "MessageId": "testthismessage",
+  "MessageReceipt": null
    }
    ```
 
-<p align="center">
-  <img src="queue message false.png" alt="Your Image Alt Text" />
-</p>
-<p align="center">
-  <em>Figure 13: Message Queue with useSoftmax: false</em>
-</p>
 
 ### Output files generated from the blob storage:
 
