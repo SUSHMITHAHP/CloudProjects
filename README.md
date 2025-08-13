@@ -494,7 +494,7 @@ The Azure Queue message triggers the application and provides all necessary para
   <img src="queue message true.png" alt="Your Image Alt Text" />
 </p>
 <p align="center">
-  <em>Figure 12: Message Queue : true</em>
+  <em>Figure 12: Message Queue</em>
 </p>
 
 
