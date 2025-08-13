@@ -398,25 +398,20 @@ docker push knncloudprojectcr.azurecr.io/mycloudproject:v2
 
 ## Experiment Result Analysis
 
-To facilitate multiple experimental setups, a variety of input files were stored in the inputfile blob storage container. Each file, in .txt format, includes both training (Train) and testing (Test) datasets. These files were designed with different combinations of training and testing data, varying sequence sizes, and datasets to enable a comprehensive evaluation. A total of 18 experiments were conducted, utilizing unique configurations of train-test data to explore the impact of sequence size and dataset composition on performance. Refer to Figure 10 for a visual representation of the data structure.
+To support the experiments, necessary input datasets were uploaded to Azure Blob Storage. The storage structure includes dedicated folders such as InputImages, ZipDatasets, and ReferenceFiles to keep resources organized. This approach ensures that all experimental runs have access to consistent, well-maintained data, enabling reliable testing, comparison, and validation of results.
 
 ### Input Files given to the blob storage:
 
-For multiple experiments of the project, several input files with different combinations of train and test data have been utilized, containing various sequence sizes and datasets in the inputfile blob storage container as shown in Figure 11. Each input file, in `.txt` format, contains both "Train" data and "Test" data. More than twenty experiments have been conducted using these input files, each featuring unique combinations of train and test data with varying sequence sizes and datasets.
+The input files used in the experiments are maintained in Azure Blob Storage with a structured, multilingual organization for efficient access and processing. The resources include:
+
+Input Images – Stored in separate folders for each language, containing text images in languages such as English, French, German, and Spanish. This enables targeted OCR analysis and direct performance comparison across different languages.
+
+ZIP Archives – Compressed datasets grouped for bulk processing, improving efficiency in upload, download, and storage of multiple related files.
+
+This detailed organization allows for streamlined workflows, reproducible results, and comprehensive evaluation of preprocessing techniques across various languages and dataset formats.
 
    - [Sample Input File 1](https://github.com/UniversityOfAppliedSciencesFrankfurt/se-cloud-2023-2024/blob/rookie_developers/Source/MyCloudProjectSample/InputFiles/Train_Test_Sequnces_exp1.txt)
    - [Sample Input File 2](https://github.com/UniversityOfAppliedSciencesFrankfurt/se-cloud-2023-2024/blob/rookie_developers/Source/MyCloudProjectSample/InputFiles/Train_Test_Sequnces_exp2.txt)
-   - [Sample Input File 3](https://github.com/UniversityOfAppliedSciencesFrankfurt/se-cloud-2023-2024/blob/rookie_developers/Source/MyCloudProjectSample/InputFiles/Train_Test_Sequnces_exp3.txt)
-   - [Sample Input File 4](https://github.com/UniversityOfAppliedSciencesFrankfurt/se-cloud-2023-2024/blob/rookie_developers/Source/MyCloudProjectSample/InputFiles/Train_Test_Sequnces_exp4.txt)
-   - [Sample Input File 5](https://github.com/UniversityOfAppliedSciencesFrankfurt/se-cloud-2023-2024/blob/rookie_developers/Source/MyCloudProjectSample/InputFiles/Train_Test_Sequnces_exp5.txt)
-   - [Sample Input File 6](https://github.com/UniversityOfAppliedSciencesFrankfurt/se-cloud-2023-2024/blob/rookie_developers/Source/MyCloudProjectSample/InputFiles/Train_Test_Sequnces_exp6.txt)
-   - [Sample Input File 7](https://github.com/UniversityOfAppliedSciencesFrankfurt/se-cloud-2023-2024/blob/rookie_developers/Source/MyCloudProjectSample/InputFiles/Train_Test_Sequnces_exp7.txt)
-   - [Sample Input File 8](https://github.com/UniversityOfAppliedSciencesFrankfurt/se-cloud-2023-2024/blob/rookie_developers/Source/MyCloudProjectSample/InputFiles/Train_Test_Sequnces_exp8.txt)
-   - [Sample Input File 9](https://github.com/UniversityOfAppliedSciencesFrankfurt/se-cloud-2023-2024/blob/rookie_developers/Source/MyCloudProjectSample/InputFiles/Train_Test_Sequnces_exp9.txt)
-   - [Sample Input File 10](https://github.com/UniversityOfAppliedSciencesFrankfurt/se-cloud-2023-2024/blob/rookie_developers/Source/MyCloudProjectSample/InputFiles/Train_Test_Sequnces_exp10.txt)
-   - [Sample Input File 11](https://github.com/UniversityOfAppliedSciencesFrankfurt/se-cloud-2023-2024/blob/rookie_developers/Source/MyCloudProjectSample/InputFiles/Train_Test_Sequnces_exp11.txt)
-   - [Sample Input File 12](https://github.com/UniversityOfAppliedSciencesFrankfurt/se-cloud-2023-2024/blob/rookie_developers/Source/MyCloudProjectSample/InputFiles/Train_Test_Sequnces_exp12.txt)
-   - [Sample Input File 13](https://github.com/UniversityOfAppliedSciencesFrankfurt/se-cloud-2023-2024/blob/rookie_developers/Source/MyCloudProjectSample/InputFiles/Train_Test_Sequnces_exp13.txt)
 
 <p align="center">
   <img src="fig11_inputfileBlob.png" alt="Your Image Alt Text" />
