@@ -398,7 +398,9 @@ docker push knncloudprojectcr.azurecr.io/mycloudproject:v2
 
 ## Experiment Result Analysis
 
-To support the experiments, necessary input files were uploaded to Azure Blob Storage. The storage structure includes dedicated folders such as InputImages, Zip files to keep resources organized. This approach ensures that all experimental runs have access to consistent, well-maintained files, enabling reliable testing, comparison, and validation of results.
+To support the experiments, all necessary input files were uploaded to Azure Blob Storage. The storage is organized into dedicated folders, such as InputImages for images and Zip for additional resources, ensuring that files are well-structured and easily accessible. This organization guarantees that every experimental run uses consistent and well-maintained data, facilitating reliable testing, comparison, and validation of results.
+The input files includes 100 images covering all supported languages. Each image undergoes a series of preprocessing techniques to enhance text extraction. The most effective preprocessing method for each image is determined, and the extracted characters from all techniques are stored back in Azure Blob Storage. This approach ensures optimized OCR results and maintains a complete record of all processed data for further analysis.
+
 
 ### Input Files given to the blob storage:
 
@@ -406,7 +408,7 @@ The input files used in the experiments are maintained in Azure Blob Storage wit
 
 **Input Images** – Stored in separate folders for each language, containing text images in languages such as English, French, German, and Spanish. This enables targeted OCR analysis and direct performance comparison across different languages.
 
-**ZIP Archives** – Compressed datasets grouped for bulk processing, improving efficiency in upload, download, and storage of multiple related files.
+**ZIP Files** – Compressed datasets grouped for bulk processing, improving efficiency in upload, download, and storage of multiple related files.
 
 This detailed organization allows for streamlined workflows, reproducible results, and comprehensive evaluation of preprocessing techniques across various languages and dataset formats.
 
