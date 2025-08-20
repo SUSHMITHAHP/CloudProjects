@@ -415,7 +415,7 @@ This centralized yet multilingual organization ensures streamlined workflows, re
  - [Sample Input File](https://portal.azure.com/#view/Microsoft_Azure_Storage/ContainerMenuBlade/~/overview/storageAccountId/%2Fsubscriptions%2Fd60f2036-12f5-499d-af22-ef3afc698896%2FresourceGroups%2FRG-TesseractCoders%2Fproviders%2FMicrosoft.Storage%2FstorageAccounts%2Ftesseractcoders/path/input-files/etag/%220x8DDDA6E35FE4FA9%22/defaultId//publicAccessVal/Container)
 
 <p align="center">
-  <img src="Input-files.JPG" alt="Your Image Alt Text" />
+  <img src="../readmeAsset/Input-files.JPG" alt="Your Image Alt Text" />
 </p>
 <p align="center">
   <em>Figure 11: Azure Input Blob Storage</em>
@@ -424,7 +424,6 @@ This centralized yet multilingual organization ensures streamlined workflows, re
 ### Message Queues:
 
 The Azure Queue message triggers the application and provides all necessary parameters for the experiment execution. The message is in JSON format and contains the following fields:
-
 
 <table>
   <thead>
@@ -490,11 +489,7 @@ The Azure Queue message triggers the application and provides all necessary para
   </tbody>
 </table>
 
-
-
-
-
-  A queue message defined as follows:
+ A queue message defined as follows:
   
    ```json
    {
@@ -514,16 +509,15 @@ The Azure Queue message triggers the application and provides all necessary para
    }
    ```
 <p align="center">
-  <img src="Message-queue.JPG" alt="Your Image Alt Text" />
+  <img src="../readmeAsset/Message-queue.JPG" alt="Your Image Alt Text" />
 </p>
 <p align="center">
   <em>Figure 12: Message Queue</em>
 </p>
 
-
 ### Output files generated from the blob storage:
 
-The output files generated from the experiments are stored in Azure Blob Storage for persistent, organized, and scalable access. In the blob storage, we store the results in three separate folders:
+The output files generated from the experiments are stored in Azure Blob Storage for persistent, organized, and scalable access. In the blob storage, the results are stored in three separate folders:
 
 **OCR Extracted Text** – This folder contains .txt files with the extracted text from all the preprocessed techniques.
 
@@ -534,7 +528,7 @@ The output files generated from the experiments are stored in Azure Blob Storage
 These files contain the results of the experiments, which can be used for further analysis.
 
 <p align="center">
-  <img src="Output-files.png" alt="Your Image Alt Text" />
+  <img src="../readmeAsset/Output-files.png" alt="Your Image Alt Text" />
 </p>
 <p align="center">
   <em>Figure 13: Output Files</em>
@@ -543,16 +537,17 @@ These files contain the results of the experiments, which can be used for furthe
 **Sample Result of an Output Console Log**
 
 <p align="center">
-  <img src="Console-log-1.png" alt="Your Image Alt Text" />
+  <img src="../readmeAsset/Console-log-1.png" alt="Your Image Alt Text" />
 </p>
 
 <p align="center">
-  <img src="Console-log-2.png" alt="Your Image Alt Text" />
+  <img src="../readmeAsset/Console-log-2.png" alt="Your Image Alt Text" />
 </p>
 
 <p align="center">
   <em>Figure 13: Console-logs</em>
 </p>
+
 
 ### Output Tables generated upon successful run:
 
@@ -560,33 +555,42 @@ Upon successful completion of the experiment, the application determines the bes
 In addition, to track all preprocessing techniques applied to the input image and the number of characters extracted by each technique, the application updates the outputTable.
 This table stores the results for every preprocessing variation, including the extracted text length, the best-performing method, and its corresponding factor value.
 
-- PartitionKey – Experiment name, used to group related records.
-- RowKey – A unique identifier for the record (GUID).
-- ExperimentId – Unique ID of the experiment.
-- InputImageName – Name of the input image file used in the experiment.
-- Best_Preprocessing_Technique – The best-performing preprocessing technique for the given input image.
-- Factor – Scaling factor or related numeric parameter for preprocessing.
-- Timestamp – UTC date/time when the record was inserted.
-- ETag – Used for concurrency control in Azure Table Storage.
-- Language – Language associated with the input image.
-- Duration – Total execution time of the experiment.
-- Bilateral_Filter_with_Brightness	Extracted character length for bilateral filter + brightness adjustment.
-- Bilateral_Filter_with_Contrast	Extracted character length for bilateral filter + contrast adjustment.
-- Bilateral_Filter_with_Rotation	Extracted character length for bilateral filter + rotation.
-- Bilateral_Filter_with_Saturation	Extracted character length for bilateral filter + saturation adjustment.
-- Gaussian_Filter_with_Brightness	Extracted character length for Gaussian filter + brightness adjustment.
-- Gaussian_Filter_with_Contrast	Extracted character length for Gaussian filter + contrast adjustment.
-- Gaussian_Filter_with_Rotation	Extracted character length for Gaussian filter + rotation.
-- Gaussian_Filter_with_Saturation	Extracted character length for Gaussian filter + saturation adjustment.
-- Gray_Scale_conversition_with_Brightness	Extracted character length for grayscale conversion + brightness adjustment.
-- Gray_Scale_conversition_with_Contrast	Extracted character length for grayscale conversion + contrast adjustment.
-- Gray_Scale_conversition_with_Rotation	Extracted character length for grayscale conversion + rotation.
-- Gray_Scale_conversition_with_Saturation	Extracted character length for grayscale conversion + saturation adjustment.
-- Median_Filter_with_Brightness	Extracted character length for median filter + brightness adjustment.
-- Median_Filter_with_Contrast	Extracted character length for median filter + contrast adjustment.
-- Median_Filter_with_Rotation	Extracted character length for median filter + rotation.
-- Median_Filter_with_Saturation	Extracted character length for median filter + saturation adjustment.
+- PartitionKey – Logical partition identifier in Azure Table Storage, used for load balancing and scalability.
+- RowKey – Unique identifier within a partition; together with PartitionKey, ensures entity uniqueness.
+- Timestamp – System-generated time at which the entity was last modified, used for concurrency control in Azure Table Storage.
+- Best_Preprocessing_Technique – The preprocessing method that yielded the most accurate OCR result for the given input image.
+- Bilateral_Filter_with_Brightness – Extracted character length after applying bilateral filter with brightness adjustment.
+- Bilateral_Filter_with_Contrast – Extracted character length after applying bilateral filter with contrast adjustment.
+- Bilateral_Filter_with_Rotation – Extracted character length after applying bilateral filter with image rotation.
+- Bilateral_Filter_with_Saturation – Extracted character length after applying bilateral filter with saturation adjustment.
+- Description – Metadata or descriptive details about the experiment run.
+- Duration_in_Seconds – Total execution time of the experiment (in seconds).
+- ExperimentId – Unique identifier assigned to each experiment for tracking and reproducibility.
+- Factor – Parameter or scaling factor used in preprocessing or experiment configuration.
+- Gaussian_Filter_with_Brightness – Extracted character length after applying Gaussian filter with brightness adjustment.
+- Gaussian_Filter_with_Contrast – Extracted character length after applying Gaussian filter with contrast adjustment.
+- Gaussian_Filter_with_Rotation – Extracted character length after applying Gaussian filter with image rotation.
+- Gaussian_Filter_with_Saturation – Extracted character length after applying Gaussian filter with saturation adjustment.
+- Gray_Scale_conversition_with_Brightness – Extracted character length after grayscale conversion with brightness adjustment.
+- Gray_Scale_conversition_with_Contrast – Extracted character length after grayscale conversion with contrast adjustment.
+- Gray_Scale_conversition_with_Rotation – Extracted character length after grayscale conversion with image rotation.
+- Gray_Scale_conversition_with_Saturation – Extracted character length after grayscale conversion with saturation adjustment.
+- InputImageName – The filename of the input image processed during the experiment.
+- Language – The language associated with the text in the input image (e.g., English, French, German).
+- Median_Filter_with_Brightness – Extracted character length after applying median filter with brightness adjustment.
+- Median_Filter_with_Contrast – Extracted character length after applying median filter with contrast adjustment.
+- Median_Filter_with_Rotation – Extracted character length after applying median filter with image rotation.
+- Median_Filter_with_Saturation – Extracted character length after applying median filter with saturation adjustment.
+- OCRExtractedText – The text recognized/extracted by OCR after preprocessing.
+- PreProcessedImages – Storage reference or metadata for the preprocessed images used in the experiment.
+- ResultSimilarityMatrix – Similarity comparison matrix of extracted text against reference text for accuracy evaluation.
 
+<p align="center">
+  <img src="../readmeAsset/Result-table_1.png" alt="Your Image Alt Text" />
+</p>
+<p align="center">
+  <img src="../readmeAsset/Result-table_2.png" alt="Your Image Alt Text" />
+</p>
 <p align="center">
   <em>Figure 15: Azure Output Table </em>
 </p>
@@ -687,17 +691,46 @@ This table stores the results for every preprocessing variation, including the e
   </tr>
 </table>
 
-<p align="center">
-  <img src="Result-table_1.png" alt="Your Image Alt Text" />
-</p>
-<p align="center">
-  <img src="Result-table_2.png" alt="Your Image Alt Text" />
-</p>
-<p align="center">
-  <em>Figure 15: Azure Output Table </em>
-</p>
+**Proof of Experiments Conducted:**
 
 
+1. [OutputFiles]-(https://portal.azure.com/#view/Microsoft_Azure_Storage/ContainerMenuBlade/~/overview/storageAccountId/%2Fsubscriptions%2Fd60f2036-12f5-499d-af22-ef3afc698896%2FresourceGroups%2FRG-TesseractCoders%2Fproviders%2FMicrosoft.Storage%2FstorageAccounts%2Ftesseractcoders/path/output-files/etag/%220x8DDDA6E3F015C87%22/defaultId//publicAccessVal/Container).
+
+<p align="center">
+  <img src="table result experiment.png" alt="Your Image Alt Text" />
+</p>
+<p align="center">
+  <em>Figure 16: Table Result of Experiment Conducted</em>
+</p>
+
+<p align="center">
+  <img src="result for 100 data.png" alt="Your Image Alt Text" />
+</p>
+<p align="center">
+  <em>Figure 17: Experiment  Visualization for handling 10 images</em>
+</p>
+
+**Experiment  Visualization for handling 10 images**
+
+**Bar graph explaination**:
+This bar chart illustrates the average extracted character length obtained from processing a bulk set of images through various preprocessing techniques.
+Each bar represents a specific preprocessing method, such as Bilateral Filter, Gaussian Filter, Grayscale Conversion, or Median Filter, combined with different adjustments like Brightness, Contrast, Rotation, or Saturation.
+
+The height of each bar reflects the effectiveness of that preprocessing technique in terms of the average number of characters extracted via OCR. Higher values indicate better text extraction performance for the corresponding method, while lower values suggest reduced text recognition output. This comparison helps in identifying which preprocessing combinations yield the most accurate and complete OCR results across a multilingual and varied dataset.
+
+**Line graph**:
+
+This line chart shows the execution duration (in seconds) for processing images associated with each experiment ID.
+
+Each point on the graph corresponds to a specific experiment (e.g., EXP-OCR-001, EXP-OCR-002), with the y-axis indicating the total time taken to complete image processing in that experiment. Variations in duration reflect differences in factors such as image complexity, preprocessing techniques applied, and the number of images processed. Peaks indicate experiments requiring more processing time, while lower points correspond to faster execution.
+
+**Average CPU Usage**
+The graph shows a low, stable CPU usage of around 20% before the experiment began. At the start of the OCR process, CPU usage sharply increased to 80% and remained at that level. This indicates the OCR task is highly CPU-intensive, consuming most of the available processing power.
+
+**Average Memory Usage**
+The graph illustrates low memory consumption below 50MB before the OCR workload was initiated. When the experiment started, memory usage spiked to approximately 450MB and stayed constant. This shows that the OCR process requires a significant amount of RAM to load and process the images.
+
+## Conclusion
 
 **Proof of Experiments Conducted:**
 1. [OutputFiles](https://studfrauasde-my.sharepoint.com/:f:/g/personal/riswan_saleem-basha2_stud_fra-uas_de/EmiPGStNXmlAqVLTPKtILycBWaNpZdu0HGl3gaecBiMGhw?e=szHAPB) --> Output Files containing each console logs has been pushed into OneDrive.
