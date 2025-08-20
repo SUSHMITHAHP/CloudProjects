@@ -398,25 +398,24 @@ docker push knncloudprojectcr.azurecr.io/mycloudproject:v2
 
 ## Experiment Result Analysis
 
-To support the experiments, all necessary input files were uploaded to Azure Blob Storage. The storage is organized into dedicated folders, such as InputImages for images and Zip for additional resources, ensuring that files are well-structured and easily accessible. This organization guarantees that every experimental run uses consistent and well-maintained data, facilitating reliable testing, comparison, and validation of results.
+To support the experiment, all necessary input files were uploaded to Azure Blob Storage in a single container named input-files. This container directly holds different file types such as JPG, PNG, and ZIP files, ensuring that all resources are centralized and easily accessible. By keeping every input file in one well-maintained container, the experiment guarantees consistent data availability for reliable testing, comparison, and validation of results.
+
 The input files includes 100 images covering all supported languages. Each image undergoes a series of preprocessing techniques to enhance text extraction. The most effective preprocessing method for each image is determined, and the extracted characters from all techniques are stored back in Azure Blob Storage. This approach ensures optimized OCR results and maintains a complete record of all processed data for further analysis.
 
+### Input Files Given to the Blob Storage:
 
-### Input Files given to the blob storage:
+The input files used in the experiments are maintained in Azure Blob Storage within a single container named input-files. The resources include:
 
-The input files used in the experiments are maintained in Azure Blob Storage with a structured, multilingual organization for efficient access and processing. The resources include:
+**Image Files** (JPG, PNG) – Text images in multiple languages (e.g., English, French, German) are stored directly in the container. This multilingual collection enables targeted OCR analysis and performance comparison across diverse datasets.
 
-**Input Images** – Stored in separate folders for each language, containing text images in languages such as English, French, German, and Spanish. This enables targeted OCR analysis and direct performance comparison across different languages.
+**ZIP Files** – Compressed datasets are also stored directly in the container, allowing bulk processing and efficient handling of larger file groups.
 
-**ZIP Files** – Compressed datasets grouped for bulk processing, improving efficiency in upload, download, and storage of multiple related files.
+This centralized yet multilingual organization ensures streamlined workflows, reproducible results, and comprehensive evaluation of preprocessing techniques across different file formats and languages.
 
-This detailed organization allows for streamlined workflows, reproducible results, and comprehensive evaluation of preprocessing techniques across various languages and dataset formats.
-
-   - [Sample Input File 1](https://github.com/UniversityOfAppliedSciencesFrankfurt/se-cloud-2023-2024/blob/rookie_developers/Source/MyCloudProjectSample/InputFiles/Train_Test_Sequnces_exp1.txt)
-   - [Sample Input File 2](https://github.com/UniversityOfAppliedSciencesFrankfurt/se-cloud-2023-2024/blob/rookie_developers/Source/MyCloudProjectSample/InputFiles/Train_Test_Sequnces_exp2.txt)
+ - [Sample Input File](https://portal.azure.com/#view/Microsoft_Azure_Storage/ContainerMenuBlade/~/overview/storageAccountId/%2Fsubscriptions%2Fd60f2036-12f5-499d-af22-ef3afc698896%2FresourceGroups%2FRG-TesseractCoders%2Fproviders%2FMicrosoft.Storage%2FstorageAccounts%2Ftesseractcoders/path/input-files/etag/%220x8DDDA6E35FE4FA9%22/defaultId//publicAccessVal/Container)
 
 <p align="center">
-  <img src="fig11_inputfileBlob.png" alt="Your Image Alt Text" />
+  <img src="Input-files.JPG" alt="Your Image Alt Text" />
 </p>
 <p align="center">
   <em>Figure 11: Azure Input Blob Storage</em>
@@ -493,13 +492,6 @@ The Azure Queue message triggers the application and provides all necessary para
 
 
 
-<p align="center">
-  <img src="queue message true.png" alt="Your Image Alt Text" />
-</p>
-<p align="center">
-  <em>Figure 12: Message Queue</em>
-</p>
-
 
 
   A queue message defined as follows:
@@ -521,6 +513,12 @@ The Azure Queue message triggers the application and provides all necessary para
   "MessageReceipt": null
    }
    ```
+<p align="center">
+  <img src="Message-queue.JPG" alt="Your Image Alt Text" />
+</p>
+<p align="center">
+  <em>Figure 12: Message Queue</em>
+</p>
 
 
 ### Output files generated from the blob storage:
@@ -536,12 +534,25 @@ The output files generated from the experiments are stored in Azure Blob Storage
 These files contain the results of the experiments, which can be used for further analysis.
 
 <p align="center">
-  <img src="fig14_outputfileBlob.png" alt="Your Image Alt Text" />
+  <img src="Output-files.png" alt="Your Image Alt Text" />
 </p>
 <p align="center">
-  <em>Figure 14: Azure Output Blob Storage </em>
+  <em>Figure 13: Output Files</em>
 </p>
-**Sample Result of an Output Console Log -- to be added**
+
+**Sample Result of an Output Console Log**
+
+<p align="center">
+  <img src="Console-log-1.png" alt="Your Image Alt Text" />
+</p>
+
+<p align="center">
+  <img src="Console-log-2.png" alt="Your Image Alt Text" />
+</p>
+
+<p align="center">
+  <em>Figure 13: Console-logs</em>
+</p>
 
 ### Output Tables generated upon successful run:
 
@@ -675,6 +686,16 @@ This table stores the results for every preprocessing variation, including the e
     <td>https://ourcloudprojectstorage.blob.core.windows.net/output/ResultSimilarityMatrix/spanish_poem</td>
   </tr>
 </table>
+
+<p align="center">
+  <img src="Result-table_1.png" alt="Your Image Alt Text" />
+</p>
+<p align="center">
+  <img src="Result-table_2.png" alt="Your Image Alt Text" />
+</p>
+<p align="center">
+  <em>Figure 15: Azure Output Table </em>
+</p>
 
 
 
