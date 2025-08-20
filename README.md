@@ -1,5 +1,10 @@
 # CloudProjects
 
+<p align="center">
+  <img src="readmeAssets/Input-files.png" alt="input">
+</p>
+<p align="center"><i>Fig.1 - inputfiles</i></p>
+
 # Project Title: ML22/23-4 Investigate and Implement KNN Classifier 
 
 ## Table of Contents
