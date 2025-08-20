@@ -1,7 +1,7 @@
 # CloudProjects
 
 <p align="center">
-  <img src="readmeAssets/Input-files.png" alt="input">
+  <img src="readmeAssets/Input-files.JPG" alt="input">
 </p>
 <p align="center"><i>Fig.1 - inputfiles</i></p>
 
