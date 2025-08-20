@@ -1016,7 +1016,7 @@ This centralized yet multilingual organization ensures streamlined workflows, re
 
 
 <p align="center">
-  <img src="readmeAsset/output.png" alt="output">
+  <img src="readmeAsset/Input-files.JPG" alt="output">
 </p>
 <p align="center"><i>Figure 11: Azure Input Blob Storage </i></p>
 
