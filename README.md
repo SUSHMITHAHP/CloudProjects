@@ -3,6 +3,9 @@
 <p align="center">
   <img src="readmeAssets/Input-files.JPG" alt="input">
 </p>
+<p align="center">
+  <em>Figure 1: Azure Input Blob Storage</em>
+</p>
 <p align="center"><i>Fig.1 - inputfiles</i></p>
 
 # Project Title: ML22/23-4 Investigate and Implement KNN Classifier 
