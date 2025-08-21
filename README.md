@@ -151,7 +151,7 @@ The Azure Queue message triggers the application and provides all necessary para
    }
    ```
 <p align="center">
-  <img src="readmeAsset/Message-queue.JPG" alt="Message-queue">
+  <img src="readmeAssets/Message-queue.JPG" alt="Message-queue">
 </p>
 <p align="center"><i>Fig.2 - Message Queue</i></p>
 
@@ -169,7 +169,7 @@ The output files generated from the experiments are stored in Azure Blob Storage
 These files contain the results of the experiments, which can be used for further analysis.
 
 <p align="center">
-  <img src="readmeAsset/Output-files.png" alt="Output-files">
+  <img src="readmeAssets/Output-files.png" alt="Output-files">
 </p>
 <p align="center"><i>Fig.3 -  Output Files</i></p>
 
@@ -177,12 +177,12 @@ These files contain the results of the experiments, which can be used for furthe
 **Sample Result of an Output Console Log**
 
 <p align="center">
-  <img src="readmeAsset/Console-log-1.png" alt="Consolelog">
+  <img src="readmeAssets/Console-log-1.png" alt="Consolelog">
 </p>
 <p align="center"><i>Fig.4 -  Console-log</i></p>
 
 <p align="center">
-  <img src="readmeAsset/Console-log-2.png" alt="Output-files">
+  <img src="readmeAssets/Console-log-2.png" alt="Output-files">
 </p>
 <p align="center"><i>Fig.5 -  Console-log</i></p>
 
@@ -228,12 +228,12 @@ This table stores the results for every preprocessing variation, including the e
 - ResultSimilarityMatrix – Similarity comparison matrix of extracted text against reference text for accuracy evaluation.
 
 <p align="center">
-  <img src="readmeAsset/Result-table_1.png" alt="result table">
+  <img src="readmeAssets/Result-table_1.png" alt="result table">
 </p>
 <p align="center"><i>Fig.5 -  result table</i></p>
 
 <p align="center">
-  <img src="readmeAsset/Result-table_2.png" alt="result table">
+  <img src="readmeAssets/Result-table_2.png" alt="result table">
 </p>
 <p align="center"><i>Fig.5-  result table</i></p>
 
