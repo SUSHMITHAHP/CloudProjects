@@ -1076,7 +1076,7 @@ Each point on the graph corresponds to a specific experiment (e.g., EXP-OCR-001,
 **Average CPU Usage**
 
 <p align="center">
-  <img src="ReadmeAssests/CPU-Usage.png" alt="Consolelog">
+  <img src="ReadmeAssests/CPU-Usage.png" alt="cpu-usage">
 </p>
 <p align="center">
   <em>Figure 17: CPU usage</em>
@@ -1087,7 +1087,7 @@ The graph shows a low, stable CPU usage of around 20% before the experiment bega
 **Average Memory Usage**
 
 <p align="center">
-  <img src="ReadmeAssests/Memory-usage.pngg" alt="Consolelog">
+  <img src="ReadmeAssests/Memory-usage.pngg" alt="Memory-usage">
 </p>
 <p align="center">
   <em>Figure 17: Memory-usage</em>
