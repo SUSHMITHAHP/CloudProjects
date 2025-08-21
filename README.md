@@ -64,7 +64,7 @@ This centralized yet multilingual organization ensures streamlined workflows, re
 
 [Sample input](https://portal.azure.com/#view/Microsoft_Azure_Storage/ContainerMenuBlade/~/overview/storageAccountId/%2Fsubscriptions%2Fd60f2036-12f5-499d-af22-ef3afc698896%2FresourceGroups%2FRG-TesseractCoders%2Fproviders%2FMicrosoft.Storage%2FstorageAccounts%2Ftesseractcoders/path/input-files/etag/%220x8DDDA6E35FE4FA9%22/defaultId//publicAccessVal/Container)
 
-
+** Azure Input Blob Storage **
 <p align="center">
   <img src="ReadmeAssests/Input-files.png" alt="input">
 </p>
@@ -1047,19 +1047,6 @@ This table stores the results for every preprocessing variation, including the e
 
 [OutputFiles](https://portal.azure.com/#view/Microsoft_Azure_Storage/ContainerMenuBlade/~/overview/storageAccountId/%2Fsubscriptions%2Fd60f2036-12f5-499d-af22-ef3afc698896%2FresourceGroups%2FRG-TesseractCoders%2Fproviders%2FMicrosoft.Storage%2FstorageAccounts%2Ftesseractcoders/path/output-files/etag/%220x8DDDA6E3F015C87%22/defaultId//publicAccessVal/Container)
 
-<p align="center">
-  <img src="table result experiment.png" alt="Your Image Alt Text" />
-</p>
-<p align="center">
-  <em>Figure 16: Table Result of Experiment Conducted</em>
-</p>
-
-<p align="center">
-  <img src="ReadmeAssests/Console-log-1.png" alt="Consolelog">
-</p>
-<p align="center">
-  <em>Figure 17: Experiment  Visualization for handling 20 images</em>
-</p>
 
 **Experiment  Visualization for handling 20 images**
 
@@ -1091,7 +1078,7 @@ Each point on the graph corresponds to a specific experiment (e.g., EXP-OCR-001,
   <em>Figure 17: CPU usage</em>
 </p>
 
-The graph shows a low, stable CPU usage of around 20% before the experiment began. At the start of the OCR process, CPU usage sharply increased to 80% and remained at that level. This indicates the OCR task is highly CPU-intensive, consuming most of the available processing power.
+This graph illustrates the system's CPU usage over time, showing a spiky and fluctuating pattern. The high usage bursts correspond to active text extraction, while the low periods indicate idle time. This pattern suggests a batch-processing workload where the system is highly active when a task is running and then becomes idle once it's complete.
 
 **Average Memory Usage**
 
@@ -1102,4 +1089,4 @@ The graph shows a low, stable CPU usage of around 20% before the experiment bega
   <em>Figure 17: Memory-usage</em>
 </p>
 
-The graph illustrates low memory consumption below 50MB before the OCR workload was initiated. When the experiment started, memory usage spiked to approximately 450MB and stayed constant. This shows that the OCR process requires a significant amount of RAM to load and process the images.
+This line graph tracks the average memory usage for the tesseractcodersaci process over a day. The vertical axis shows memory usage in gigabytes (GB), with the scale ranging from 0 to over 3 GB. This shows that the OCR process requires a significant amount of RAM to load and process the images.
