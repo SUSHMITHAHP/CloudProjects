@@ -1090,7 +1090,7 @@ The graph shows a low, stable CPU usage of around 20% before the experiment bega
 **Average Memory Usage**
 
 <p align="center">
-  <img src="ReadmeAssests/Memory-usage.pngg" alt="Memory-usage">
+  <img src="ReadmeAssests/Memory-usage.png" alt="Memory-usage">
 </p>
 <p align="center">
   <em>Figure 17: Memory-usage</em>
