@@ -66,9 +66,11 @@ This centralized yet multilingual organization ensures streamlined workflows, re
 
 
 <p align="center">
-  <img src="ReadmeAssests/Input-files.JPG" alt="input">
+  <img src="ReadmeAssests/Input-files.png" alt="input">
 </p>
-<p align="center"><i>Fig.1 - Azure Input Blob Storage</i></p>
+<p align="center">
+  <em>Figure 1: Azure Input Blob Storage</em>
+</p>
 
 ### Message Queues:
 
@@ -157,6 +159,7 @@ The Azure Queue message triggers the application and provides all necessary para
   "MessageReceipt": null
    }
    ```
+
 <p align="center">
   <img src="ReadmeAssests/Message-queue.JPG" alt="Message-queue">
 </p>
@@ -189,7 +192,7 @@ These files contain the results of the experiments, which can be used for furthe
 <p align="center"><i>Fig.4 -  Console-log</i></p>
 
 <p align="center">
-  <img src="ReadmeAssests/Console-log-2.png" alt="Output-files">
+  <img src="ReadmeAssests/Console-log-2.png" alt="Consolelog">
 </p>
 <p align="center"><i>Fig.5 -  Console-log</i></p>
 
