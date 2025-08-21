@@ -1065,6 +1065,13 @@ The height of each bar reflects the effectiveness of that preprocessing techniqu
 
 **Line graph**:
 
+<p align="center">
+  <img src="ReadmeAssests/Duration.JPG" alt="Duration to process an image">
+</p>
+<p align="center">
+  <em>Figure 17: Time taken to process images  </em>
+</p>
+
 This line chart shows the execution duration (in seconds) for processing images associated with each experiment ID.
 
 Each point on the graph corresponds to a specific experiment (e.g., EXP-OCR-001, EXP-OCR-002), with the y-axis indicating the total time taken to complete image processing in that experiment. Variations in duration reflect differences in factors such as image complexity, preprocessing techniques applied, and the number of images processed. Peaks indicate experiments requiring more processing time, while lower points correspond to faster execution.
