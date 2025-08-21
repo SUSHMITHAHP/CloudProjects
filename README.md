@@ -182,12 +182,13 @@ These files contain the results of the experiments, which can be used for furthe
 
 **Output files stored in Azure blob storage**
 
+[OutputFiles](https://portal.azure.com/#view/Microsoft_Azure_Storage/ContainerMenuBlade/~/overview/storageAccountId/%2Fsubscriptions%2Fd60f2036-12f5-499d-af22-ef3afc698896%2FresourceGroups%2FRG-TesseractCoders%2Fproviders%2FMicrosoft.Storage%2FstorageAccounts%2Ftesseractcoders/path/output-files/etag/%220x8DDDA6E3F015C87%22/defaultId//publicAccessVal/Container)
+
 <p align="center">
   <img src="ReadmeAssests/Output-files.png" alt="Output-files">
 </p>
 <p align="center"><i>Fig.3 -  Output Files</i></p>
 
-[OutputFiles](https://portal.azure.com/#view/Microsoft_Azure_Storage/ContainerMenuBlade/~/overview/storageAccountId/%2Fsubscriptions%2Fd60f2036-12f5-499d-af22-ef3afc698896%2FresourceGroups%2FRG-TesseractCoders%2Fproviders%2FMicrosoft.Storage%2FstorageAccounts%2Ftesseractcoders/path/output-files/etag/%220x8DDDA6E3F015C87%22/defaultId//publicAccessVal/Container)
 
 
 **Sample Result of an Output Console Log**
