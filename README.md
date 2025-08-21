@@ -160,6 +160,8 @@ The Azure Queue message triggers the application and provides all necessary para
    }
    ```
 
+**Message Queue**
+
 <p align="center">
   <img src="ReadmeAssests/Message-queue.JPG" alt="Message-queue">
 </p>
@@ -177,6 +179,8 @@ The output files generated from the experiments are stored in Azure Blob Storage
 **Result Similarity Matrix** – This folder contains the similarity values among all the preprocessing techniques.
 
 These files contain the results of the experiments, which can be used for further analysis.
+
+**Output files stored in Azure blob storage**
 
 <p align="center">
   <img src="ReadmeAssests/Output-files.png" alt="Output-files">
@@ -236,6 +240,8 @@ This table stores the results for every preprocessing variation, including the e
 - OCRExtractedText – The text recognized/extracted by OCR after preprocessing.
 - PreProcessedImages – Storage reference or metadata for the preprocessed images used in the experiment.
 - ResultSimilarityMatrix – Similarity comparison matrix of extracted text against reference text for accuracy evaluation.
+
+**Azure Output Table**
 
 <p align="center">
   <img src="ReadmeAssests/Result-table_1.png" alt="result table">
